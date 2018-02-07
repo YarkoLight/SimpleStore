@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 style="text-align: center">test js</h1>
+
+<!--<div id="result"></div>-->
+
+<!--<input type="text" id="in" placeholder="text">-->
+<!--<button id="send">send</button>-->
+
+<!--<select id="season" onchange="getValueFromSelect()">-->
+<!--<option value="1">winter</option>-->
+<!--<option value="1">winter</option>-->
+<!--<option value="2">spring</option>-->
+<!--<option value="3">summer</option>-->
+<!--<option value="4">autumn</option>-->
+<!--</select>-->
+
+<input type="text" id="login">
+<br>
+<input type="text" id="email">
+<br>
+<input type="text" id="pass">
+<br>
+
+<input type="checkbox" name="job" value="driver">driver
+<input type="checkbox" name="job" value="miner">miner
+<input type="checkbox" name="job" value="manager">manager
+<input type="checkbox" name="job" value="developer">developer
+
+<button id="save">save</button>
+
+<script>
+
+    document.getElementById('save').onclick = function () {
+
+        var user = {
+            userLogin: document.getElementById('login').value,
+            userEmail: document.getElementById('email').value,
+            userPass: document.getElementById('pass').value,
+            job: []
+        };
+
+        var checkboxes = document.getElementsByName('job');
+
+        for (var i in checkboxes) {
+
+            if (checkboxes[i].checked) {
+
+                user.job.push(checkboxes[i].value);
+
+            }
+
+        }
+
+        console.log(user);
+
+    }
+
+
+    //    function getValueFromSelect() {
+    //        console.log(document.getElementById('season').value);
+    //        var summerArray = ['sun','water','beer','relax'];
+    //
+    //        var summerSelect = document.createElement('select');
+    //
+    //        var text = '';
+    //
+    //        for(var i in summerArray){
+    //
+    //            text+= '<option>'+summerArray[i]+'</option>';
+    //
+    //        }
+    //
+    //        summerSelect.innerHTML = text;
+    //
+    //        document.body.appendChild(summerSelect);
+    //    }
+
+    //    document.getElementById('send').onclick = function () {
+
+    //            alert('alert click')
+    //            confirm('do you speak english?')
+    //            console.log(confirm('do you speak english?'))
+
+    //        console.log(document.getElementById('in').value)
+
+    //        var fromInput = document.getElementById('in').value;
+    //
+    //        var myDiv = document.createElement('div');
+    //
+    //        myDiv.style.backgroundColor = 'red';
+    //
+    //        myDiv.innerHTML = fromInput;
+    //
+    //        document.getElementById('result').appendChild(myDiv);
+
+    //        var res = document.getElementById('result').innerHTML;
+    //
+    //        res += '<div style="color: #5bc0de">'+fromInput+'</div>';
+    //
+    //
+    //        document.getElementById('result').innerHTML =res;
+
+    //    }
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test js</title>
+</head>
+<body>
+<h1 style="text-align: center">test js</h1>
+
+<!--<div id="result"></div>-->
+
+<!--<input type="text" id="in">-->
+
+<!--<button id="send">send</button>-->
+
+<!--<select id="category" onchange="getValueFromSelect()">-->
+<!--<option value="summer">summer</option>-->
+<!--<option value="autumn">autumn</option>-->
+<!--<option value="winter">winter</option>-->
+<!--<option value="spring">spring</option>-->
+<!--</select>-->
+
+<input type="text" id="login">
+<input type="text" id="email">
+<input type="text" id="pass">
+<button id="save">save</button>
+
+
+<script>
+
+    document.getElementById('save').onclick = function () {
+
+        var user = {
+            userLogin: document.getElementById('login').value,
+            userEmail: document.getElementById('email').value,
+            userPassword: document.getElementById('pass').value,
+            job : ['driver', 'miner', 'nurs']
+        }
+
+        console.log(user);
+
+
+    }
+
+
+    //    function getValueFromSelect() {
+    //
+    //        console.log(document.getElementById('category').value);
+    //
+    //        var springArray = ['trainers', 'flowers', 'cats'];
+    //
+    //        var mySelect = document.createElement('select');
+    //
+    //        var line = '';
+    //
+    //        for(var i in springArray){
+    //
+    //            line+='<option>'+springArray[i]+'</option>';
+    //
+    //        }
+    //
+    //        mySelect.innerHTML = line;
+    //
+    //        document.body.appendChild(mySelect);
+    //
+    //    }
+
+
+    //    var first = 10;
+    //    var second = '10';
+    //
+    //    if(first === second){
+    //        console.log('equal')
+    //    }else{
+    //        console.log('else')
+    //    }
+
+    //document.getElementById('send').onclick = function () {
+    //    var fromInput = document.getElementById('in').value;
+
+
+    //    var myDiv = document.createElement('div');
+    //    myDiv.innerHTML = fromInput;
+    //    myDiv.style.backgroundColor = 'red';
+    //
+    //    document.getElementById('result').appendChild(myDiv);
+
+    //    var res = document.getElementById('result').innerHTML;
+    //
+    //    res = res +'<br>'+fromInput;
+    //
+    //    document.getElementById('result').innerHTML = res;
+
+    //        alert('click')
+    //        console.log("msg in console")
+    //        console.log(confirm('do speak english?'))
+    //        console.log(document.getElementById('in').value);
+
+
+    //    };
+
+
+</script>
+
+
+</body>
+</html>
